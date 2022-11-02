@@ -28,12 +28,20 @@ module.exports =
                         type: DataTypes.INTEGER,
                         allowNull: true
                     },
+                    updatedAt:{
+                        type: DataTypes.INTEGER,
+                        allowNull:true
+                    },
+                    updatedBy:{
+                        type: DataTypes.INTEGER,
+                        allowNull:true
+                    }
                 },
                 {
                     sequelize,
-                    timestamps: true,
+                    timestamps: false,
                     paranoid: false,
-                    underscored: true,
+                    underscored: false,
                     tableName: 'post',
                     freezeTableName: true,
                 }
